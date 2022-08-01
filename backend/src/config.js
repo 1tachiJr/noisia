@@ -7,20 +7,22 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Spacesicles";
-const description = "The first invasion has arrived: The Spacesicle";
+const namePrefix = "NoisiA";
+const description = "A generative collection of utility tokens designed to be the jack of all trades when it comes to utility. Hailing from the deepest regions of space The NoisiA is here to do one thing....take over the metaverse by spreading the virus of ~Utility~ throughout the web3 universe. Cosmic Noisia is the 2nd installment of membership NFTs from Spacetry offering access to a private community, holder exclusive merch store, voting rights in the community DAO, passive income and MORE!";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 1000,
+    growEditionSizeTo: 1111,
     layersOrder: [
       { name: "Background" },
-      { name: "Ooze" },
-      { name: "Shadow" },
-      { name: "Spacesicle" },
-      { name: "Stick" },
+      { name: "Backpack" },
+      { name: "Bubble" },
+      { name: "Clothes" },
+      { name: "Helmet" },
+      { name: "Helmet Effect" },
+      { name: "Pastry" },
     ],
   },
 ];
@@ -30,8 +32,8 @@ const shuffleLayerConfigurations = true;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 2160,
+  height: 2160,
   smoothing: false,
 };
 
@@ -44,20 +46,20 @@ const extraMetadata = {
 // ** REQUIRED **
 const AUTH = process.env.NFTPORT_API_KEY; // Set this in the .env file to prevent exposing your API key when pushing to Github
 const LIMIT = 2; // Your API key rate limit
-const CHAIN = 'polygon'; // only rinkeby or polygon
+const CHAIN = 'rinkeby'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'Spacesicle';
-const CONTRACT_SYMBOL = 'SPC';
+const CONTRACT_NAME = 'Noisia';
+const CONTRACT_SYMBOL = 'CNS';
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x82504eE450f0eBE6c0557cCaEc13F4949BddDD11';
 const TREASURY_ADDRESS = '0x82504eE450f0eBE6c0557cCaEc13F4949BddDD11';
-const MAX_SUPPLY = 1000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 9; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
-const TOKENS_PER_MINT = 5; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
+const MAX_SUPPLY = 1111; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const MINT_PRICE = 0; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const TOKENS_PER_MINT = 3; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-04-20T04:20:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-07-27T04:20:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
@@ -68,7 +70,7 @@ const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the
 const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses
 
 // ** OPTIONAL **
-let CONTRACT_ADDRESS = "0x35Df07A9125B97D163afA87EFc39BB1D5cF9ba48"; // If you want to manually include it
+let CONTRACT_ADDRESS = ""; // If you want to manually include it
 
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
